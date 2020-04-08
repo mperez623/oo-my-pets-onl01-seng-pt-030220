@@ -53,7 +53,8 @@ class Owner
   end
   
   def sell_pets
-    pets[:cats, :dogs].concat.each do |pet|
+    new_life = self.cats + self.dogs
+    new_life.each do |pet|
       pet.mood = "nervous"
       pet.owner = nil
     end
